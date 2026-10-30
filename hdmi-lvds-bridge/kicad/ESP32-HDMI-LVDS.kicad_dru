@@ -1,0 +1,25 @@
+(version 1)
+
+(rule "Differential pair length target 18.70mm (LVDS)"
+    (condition "A.NetName == '/LVDS*'")
+    (constraint length
+        (min 18.67mm)
+        (max 18.74mm)
+    )
+)
+
+(rule "Differential pair length target 71.74mm (ESP32)"
+    (condition "A.NetName == '/ESP32*_P' || A.NetName == '/ESP32*_N'")
+    (constraint length
+        (min 71.69mm)
+        (max 71.78mm)
+    )
+)
+
+(rule "Differential pair length target 12.76 mm (TX)"
+    (condition "A.NetName == '/TX*_P' || A.NetName == '/TX*_N'")
+    (constraint length
+        (min 12.62mm)
+        (max 12.90mm)
+    )
+)
